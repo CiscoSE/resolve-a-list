@@ -33,7 +33,7 @@ def use_nslookup(hosts, nameserver):
    flush = p['flush'].communicate()
    logger.debug(flush)
    for n in hosts: # start ping processes
-      ip = "%s.floordecor.com" % n
+      ip = "%s.anydomain.com" % n
       p[ip] = Popen(['nslookup', ip, nameserver], stdout=PIPE)
       lookup = p[ip].communicate()
       logger.info(lookup)
